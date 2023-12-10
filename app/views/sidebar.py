@@ -16,28 +16,6 @@ def view_sidebar(page):
                                     content=Row(spacing=25,
                                         controls=[
                                             Stack(
-                                                [
-                                                    CircleAvatar(content=Image(src="app/assets/person.jpg")
-                                                            # foreground_image_url="app/assets/person.jpg"
-                                                    ),
-                                                    Container(
-                                                            content=CircleAvatar(bgcolor=colors.GREEN, radius=5),
-                                                            alignment=alignment.bottom_left,
-                                                    ),
-                                                ],
-                                                width=40,
-                                                height=40,
-                                            ),
-                                            Text(
-                                                "Username",
-                                                size=17,
-                                                font_family="PoppinsSemiBold",
-                                                color="#022E57"
-                                            ),
-                                            Icon(
-                                                name='logout',
-                                                color="#022E57",
-                                                tooltip="Logout"
                                             )
                                         ]
                                     )

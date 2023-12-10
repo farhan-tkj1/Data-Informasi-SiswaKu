@@ -31,19 +31,8 @@ def main(page : Page):
             )
         )
         page.update()
-
-        if page.route == "/dashboard":
-            page.views.append(
-                View(
-                    route="/dashboard",
-                    controls=[Row(spacing=0,controls=[sidebar.view,view_dashboard(page)])],
-                    padding=0
-                )
-            )
-            page.update()
             
-
-        elif page.route == "/data-siswa":
+        if page.route == "/data-siswa":
             page.views.clear()
             sidebar.view_sidebar(page)
             data_siswa.view_data_siswa(page)
@@ -80,13 +69,7 @@ def main(page : Page):
 
         page.update()
 
-    def view_pop(view):
-        page.views.pop()
-        top_view = page.views[-1]
-        page.go('/')
-
     page.on_route_change = route_change
-    page.on_view_pop = view_pop
     page.go('/')
 
     page.update()
